@@ -10,6 +10,16 @@ codacy-coverage-reporter will only work with:
   * Java JRE 7 and higher
 ```
 
+## Usage
+
+```sh
+docker run -it
+           -e CODACY_PROJECT_TOKEN=ffffffffffffffffffffffffffffffff
+           -v $(pwd):/src
+           yongjhih/codacy-coverage-reporter
+           codacy-coverage-reporter -l Java -r ./mocker/build/reports/jacoco/test/jacocoTestReport.xml
+```
+
 ## Setup
 
 Codacy assumes that coverage is previously configured for your project.
